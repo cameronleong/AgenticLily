@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 180" width="800" height="180">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090e18"/>
+      <stop offset="100%" stop-color="#091409"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="180" fill="url(#bg)" rx="12"/>
+
+  <!-- Staff lines -->
+  <g stroke="#1e3a22" stroke-width="1.2">
+    <line x1="40" y1="85"  x2="780" y2="85"/>
+    <line x1="40" y1="100" x2="780" y2="100"/>
+    <line x1="40" y1="115" x2="780" y2="115"/>
+    <line x1="40" y1="130" x2="780" y2="130"/>
+    <line x1="40" y1="145" x2="780" y2="145"/>
+  </g>
+
+  <!-- Lily stem -->
+  <line x1="105" y1="118" x2="105" y2="172" stroke="#3d6b47" stroke-width="3" stroke-linecap="round"/>
+  <!-- Leaf -->
+  <path d="M 105,152 C 128,136 150,146 140,162 C 120,158 110,155 105,152" fill="#3d6b47"/>
+
+  <!-- Lily petals (6, rotated around centre) -->
+  <g transform="translate(105, 107)">
+    <path d="M 0,0 C -7,-8 -5,-28 0,-36 C 5,-28 7,-8 0,0" fill="#e8f5e9" transform="rotate(0)"/>
+    <path d="M 0,0 C -7,-8 -5,-28 0,-36 C 5,-28 7,-8 0,0" fill="#c8e6c9" transform="rotate(60)"/>
+    <path d="M 0,0 C -7,-8 -5,-28 0,-36 C 5,-28 7,-8 0,0" fill="#e8f5e9" transform="rotate(120)"/>
+    <path d="M 0,0 C -7,-8 -5,-28 0,-36 C 5,-28 7,-8 0,0" fill="#c8e6c9" transform="rotate(180)"/>
+    <path d="M 0,0 C -7,-8 -5,-28 0,-36 C 5,-28 7,-8 0,0" fill="#e8f5e9" transform="rotate(240)"/>
+    <path d="M 0,0 C -7,-8 -5,-28 0,-36 C 5,-28 7,-8 0,0" fill="#c8e6c9" transform="rotate(300)"/>
+    <!-- Centre -->
+    <circle cx="0" cy="0" r="7" fill="#f9cc22"/>
+    <!-- Stamens -->
+    <line x1="0"    y1="-7"   x2="0"     y2="-19"  stroke="#f9cc22" stroke-width="1.5"/>
+    <circle cx="0" cy="-20" r="2" fill="#f9cc22"/>
+    <line x1="6.1"  y1="-3.5" x2="15.6"  y2="-9"   stroke="#f9cc22" stroke-width="1.5"/>
+    <circle cx="16.6" cy="-9.6" r="2" fill="#f9cc22"/>
+    <line x1="-6.1" y1="-3.5" x2="-15.6" y2="-9"   stroke="#f9cc22" stroke-width="1.5"/>
+    <circle cx="-16.6" cy="-9.6" r="2" fill="#f9cc22"/>
+  </g>
+
+  <!-- Quarter note on line 3 -->
+  <ellipse cx="175" cy="115" rx="7" ry="5" fill="#4ade80" transform="rotate(-20,175,115)"/>
+  <line x1="181" y1="113" x2="181" y2="85" stroke="#4ade80" stroke-width="2"/>
+  <!-- Quarter note on line 2 -->
+  <ellipse cx="210" cy="100" rx="7" ry="5" fill="#4ade80" transform="rotate(-20,210,100)"/>
+  <line x1="216" y1="98"  x2="216" y2="70" stroke="#4ade80" stroke-width="2"/>
+  <!-- Beamed eighth pair -->
+  <ellipse cx="245" cy="115" rx="7" ry="5" fill="#4ade80" transform="rotate(-20,245,115)"/>
+  <line x1="251" y1="113" x2="251" y2="83" stroke="#4ade80" stroke-width="2"/>
+  <ellipse cx="272" cy="107" rx="7" ry="5" fill="#4ade80" transform="rotate(-20,272,107)"/>
+  <line x1="278" y1="105" x2="278" y2="83" stroke="#4ade80" stroke-width="2"/>
+  <rect x="251" y="83" width="27" height="4" fill="#4ade80" rx="1"/>
+
+  <!-- Title -->
+  <text x="315" y="122" font-family="Georgia,'Times New Roman',serif" font-size="52"
+        font-weight="bold" fill="#e8f5e9" letter-spacing="1">AgenticLily</text>
+  <!-- Subtitle -->
+  <text x="318" y="150" font-family="Georgia,'Times New Roman',serif" font-size="14"
+        fill="#66bb6a" letter-spacing="5">music transcription workflow</text>
+</svg>
