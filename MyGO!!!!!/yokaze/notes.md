@@ -96,7 +96,7 @@ E|--                            E|--4           E|--            E|--4
 
 ## Song Structure
 
-**Bar numbering is continuous throughout the song. Last mapped: bar 69 (Bridge 3).**
+**Bar numbering is continuous throughout the song. Last mapped: bar 73 (Bridge 3).**
 
 ### Intro (Bars 1–8)
 Pattern: G5 F5 | Eb5 Bb5 (×4)
@@ -142,9 +142,9 @@ Key: Bb minor (5 flats)
 ### Bridge 3 (Bars 65–)
 Key: C#m (4 sharps — F#, C#, G#, D#)
 
-| Bar | 65 | 66 | 67 | 68 | 69 |
-|-----|----|----|----|----|----|
-| | A5→E5 | B5→C#5 | A5→E5 | B5 (driving) | A5→E5 (ending variant) |
+| Bar | 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72 | 73 |
+|-----|----|----|----|----|----|----|-----|-----|-----|
+| | A5→E5 | B5→C#5 | A5→E5 | B5 (driving) | A5→E5 (ending variant) | B→Caug→C→C#→C#5 (chromatic walk) | A PM pickup → A5 → E5/A-string | B5 full bar | Ab5 → rq → muted+F5 |
 
 ---
 
@@ -159,6 +159,13 @@ Key: C#m (4 sharps — F#, C#, G#, D#)
 **Bar 62** — Amaj: `(ee)(ee)(ee)(ee)`
 **Bar 63** — Ab5 → Ab bass (PM ×3) → Ab bass → Abmaj: `(e [4-----]e) [4-----](ee) [4-----](e [Abmaj]eee)` — palm mute first three `[4-----]`
 **Bar 64** — Abmaj `h~q` (tied, 3 beats) + `[xxxxxx]q` slide down
+
+## Bridge 3 Rhythm
+
+**Bar 70** — B→Caug→C→C#→C#5: `(ee)(ee)(ee)(ess)` — PM on single E-string notes (`7-----`, `8-----`, `9-----`) only; `8[11]---` (Caug) and `9[11]---` (C#5) not PM'd
+**Bar 71** — A PM pickup → A5 → E5/A-string: `[a,\6](ee) [A5]q [E5/A](sse)(ess)` — PM on root pickup only; A5 (`<a,\6 e\5>`) and E5/A (`<e\5 b\4>`) not PM'd
+**Bar 72** — B5 full bar: `(ee)(ess)(sse)(ess)` — no PM
+**Bar 73** — Ab5 → rest → muted+F5: `[46----](ses)(ess) rq [xxxxxx]s [13----]e.`
 
 ---
 

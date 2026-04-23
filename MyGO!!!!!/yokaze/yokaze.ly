@@ -331,6 +331,41 @@ barSixtyNine = {
   \palmMuteOn <e,\6 e\5>16\startTextSpan <e,\6 e\5>16\stopTextSpan \palmMuteOff |
 }
 
+% Bar 70 — chromatic walk B→Caug→C→C#→C#5, PM on single E-string notes only
+barSeventy = {
+  \override TextSpanner.bound-details.left.text = \markup { \small \bold "P.M." }
+  \palmMuteOn b,8\6\startTextSpan b,8\6\stopTextSpan \palmMuteOff
+  <c\6 gis\5>8
+  \override TextSpanner.bound-details.left.text = \markup { \small \bold "P.M." }
+  \palmMuteOn c8\6\startTextSpan cis8\6 cis8\6\stopTextSpan \palmMuteOff
+  <cis\6 gis\5>8 <cis\6 gis\5>16 <cis\6 gis\5>16 |
+}
+
+% Bar 71 — PM A pickup (ee) → A5 q → E5/A-string (sse)(ess)
+barSeventyOne = {
+  \override TextSpanner.bound-details.left.text = \markup { \small \bold "P.M." }
+  \palmMuteOn a,8\6\startTextSpan a,8\6\stopTextSpan \palmMuteOff
+  <a,\6 e\5>4
+  <e\5 b\4>16 <e\5 b\4>16 <e\5 b\4>8
+  <e\5 b\4>8 <e\5 b\4>16 <e\5 b\4>16 |
+}
+
+% Bar 72 — B5 full bar (ee)(ess)(sse)(ess)
+barSeventyTwo = {
+  <b,\6 fis\5>8 <b,\6 fis\5>8
+  <b,\6 fis\5>8 <b,\6 fis\5>16 <b,\6 fis\5>16
+  <b,\6 fis\5>16 <b,\6 fis\5>16 <b,\6 fis\5>8
+  <b,\6 fis\5>8 <b,\6 fis\5>16 <b,\6 fis\5>16 |
+}
+
+% Bar 73 — Ab5 (ses)(ess) → rq → muted s + F5 e.
+barSeventyThree = {
+  <aes,\6 ees\5>16 <aes,\6 ees\5>8 <aes,\6 ees\5>16
+  <aes,\6 ees\5>8 <aes,\6 ees\5>16 <aes,\6 ees\5>16
+  r4
+  \deadNote <e,\6 a,\5 d\4 g\3 b\2 e'\1>16 <f,\6 c\5>8. |
+}
+
 % ── Chord name bar variables ─────────────────────────────────────────────────
 
 chGF      = \chordmode { g4:5 g8.:5 g16:5 g16:5 f16:5 f8:5 f8:5 f16:5 f16:5 | }
@@ -357,6 +392,10 @@ chSixtyFour = \chordmode { aes2.:maj s4 | }
 chSixtyFive  = \chordmode { a2:5 e2:5 | }
 chSixtySix   = \chordmode { b2:5 cis2:5 | }
 chSixtyEight = \chordmode { b1:5 | }
+chSeventy    = \chordmode { b2:5 cis2:5 | }
+chSeventyOne = \chordmode { a2:5 e2:5 | }
+chSeventyTwo   = \chordmode { b1:5 | }
+chSeventyThree = \chordmode { aes2:5 s4 f4:5 | }
 
 chordNames = {
   \key bes \major
@@ -389,7 +428,8 @@ chordNames = {
   % Bridge 3 (65–)
   \key cis \minor
   \chSixtyFive \chSixtySix \chSixtyFive \chSixtyEight
-  \chSixtyFive
+  \chSixtyFive \chSeventy \chSeventyOne \chSeventyTwo
+  \chSeventyThree
 }
 
 music = {
@@ -434,7 +474,8 @@ music = {
   \mark \markup { \bold "Bridge 3" }
   \key cis \minor
   \barSixtyFive \barSixtySix \barSixtySeven \barSixtyEight \break
-  \barSixtyNine
+  \barSixtyNine \barSeventy \barSeventyOne \barSeventyTwo \break
+  \barSeventyThree
 }
 
 \score {
