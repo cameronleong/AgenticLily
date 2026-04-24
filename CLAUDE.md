@@ -75,7 +75,7 @@ When no bracket is given, the bar's primary chord is assumed.
 - `0` in a tab string = open string (e.g. `4660--` = E fret 4, A fret 6, D fret 6, G open)
 - Tied note: `h tied into q` or `h~q` — half note tied to quarter (chord held 3 beats); LilyPond: `<chord>2~ <chord>4`
 - `(ee)[slide up]` — last note of the group gets `\glissando` to first note of next bar
-- `slide down` as trailing articulation on a chord or dead note — rendered as `\bendAfter #-5`
+- `slide down` as trailing articulation on a chord or dead note — rendered as `\glissando`
 - Palm muting stated as trailing prose: *"palm mute the [1-----]"* — applies to every occurrence of that shape in the bar; rendered as a text spanner:
   ```lilypond
   \override TextSpanner.bound-details.left.text = \markup { \small \bold "P.M." }
@@ -110,6 +110,44 @@ When no bracket is given, the bar's primary chord is assumed.
 <bes,\6 \tweak style #'cross a,\5 a\4 d'\3 f'\2>
 ```
 Omitting the muted string entirely shows `-` (gap), not `x`.
+
+### Adding a lead guitar staff
+
+When asked to add lead guitar lines, use this structure:
+
+**1.** Add a `leadMusic` variable with `R1*n` whole-bar rests as placeholders, mirroring every `\key` change in `\music`:
+
+```lilypond
+leadMusic = {
+  \key bes \major
+  \time 4/4
+  R1*8   % Intro
+  \key bes \minor
+  R1*9   % Bridge 2
+  % etc.
+}
+```
+
+**2.** Restructure `\score` — place lead Staff + TabStaff above the rhythm staves inside one `StaffGroup`:
+
+```lilypond
+\new StaffGroup <<
+  \new Staff {
+    \clef "treble_8"
+    \override Staff.StringNumber.stencil = ##f
+    \leadMusic
+  }
+  \new TabStaff \leadMusic
+  \new Staff {
+    \clef "treble_8"
+    \override Staff.StringNumber.stencil = ##f
+    \music
+  }
+  \new TabStaff \music
+>>
+```
+
+**3.** Before applying to the full file, create `songname_test.ly` with just a few bars (placeholder whole notes on lead, real rhythm bars) to confirm layout. Compile and show the user before proceeding.
 
 ---
 

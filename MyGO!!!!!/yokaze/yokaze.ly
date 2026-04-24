@@ -530,6 +530,25 @@ music = {
   \barEbBb \barEightyNine \barNinety \barNinetyOne \break
 }
 
+leadMusic = {
+  \key bes \major
+  \time 4/4
+  R1*8   % Intro
+  R1*8   % Verse 1
+  R1*8   % Bridge 1
+  R1*11  % Chorus
+  R1*4   % Fill
+  R1*8   % Verse 2
+  R1*8   % Solo 1
+  \key bes \minor
+  R1*9   % Bridge 2
+  \key cis \minor
+  R1*9   % Bridge 3
+  \key bes \major
+  R1*10  % Chorus 2
+  R1*8   % Solo 2
+}
+
 \score {
   <<
     \new ChordNames {
@@ -537,6 +556,12 @@ music = {
       \chordNames
     }
     \new StaffGroup <<
+      \new Staff {
+        \clef "treble_8"
+        \override Staff.StringNumber.stencil = ##f
+        \leadMusic
+      }
+      \new TabStaff \leadMusic
       \new Staff {
         \clef "treble_8"
         \override Staff.StringNumber.stencil = ##f
