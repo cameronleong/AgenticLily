@@ -30,6 +30,28 @@ User:   244322(ee)e rq. xxxxxx(ses)
 Claude: Gbmaj — beamed eighths, then rq., then dead strum. Writing bar 56.
 ```
 
+More example prompts from the same transcription:
+
+```
+70: 700000 700000 8[11]0000 800000 900000 900000 9[11]0000 9[11]0000 9[11]0000 in the following rhythm (ee)(ee)(ee)(ess)
+
+palm muted A on the low E (ee), a power chord q, E power chord on the fifth string (sse)(ess)
+
+b power chord with 6th string root, (ee)(ess)(sse)(ess)
+
+46----(ses)(ess) rq xxxxxx(s 13---- e.)
+
+next section is another chorus, we call this chorus 2, the first nine bars are the same as the chorus previously
+
+84 onwards is the final section of the song called "Solo 2". 84: rh re xxxxxx(ss) q slide down
+
+next four bars are the same as the intro
+
+G5 q (e. s)(sse) xxxxxx(s F5e.)
+
+F5 w~w for two bars
+```
+
 ### Composition
 
 Describe what you want in plain language. Claude generates the LilyPond source and compiles it.

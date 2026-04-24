@@ -96,7 +96,7 @@ E|--                            E|--4           E|--            E|--4
 
 ## Song Structure
 
-**Bar numbering is continuous throughout the song. Last mapped: bar 73 (Bridge 3).**
+**Bar numbering is continuous throughout the song. Last mapped: bar 91 (Solo 2 — end of song).**
 
 ### Intro (Bars 1–8)
 Pattern: G5 F5 | Eb5 Bb5 (×4)
@@ -139,12 +139,21 @@ Key: Bb minor (5 flats)
 |-----|----|----|----|----|----|----|----|----|-----|
 | | Gbmaj | Abmaj | Dbmaj Fm | Bbm7 Fm | Gbmaj | Abmaj | Amaj | Ab5/Ab bass/Abmaj | Abmaj |
 
-### Bridge 3 (Bars 65–)
+### Bridge 3 (Bars 65–73)
 Key: C#m (4 sharps — F#, C#, G#, D#)
 
 | Bar | 65 | 66 | 67 | 68 | 69 | 70 | 71 | 72 | 73 |
 |-----|----|----|----|----|----|----|-----|-----|-----|
 | | A5→E5 | B5→C#5 | A5→E5 | B5 (driving) | A5→E5 (ending variant) | B→Caug→C→C#→C#5 (chromatic walk) | A PM pickup → A5 → E5/A-string | B5 full bar | Ab5 → rq → muted+F5 |
+
+### Chorus 2 (Bars 74–83)
+Bars 74–82 identical to Chorus bars 25–33. Bar 83: F5 `(ee)(ee)e rq.`
+
+### Solo 2 (Bars 84–91)
+Bar 84: `rh re [xxxxxx](ss) [xxxxxx]q` slide down
+Bars 85–88: identical to Intro bars 1–4 (G5 F5 | Eb5 Bb5 × 2)
+Bar 89: G5 `q (e.s)(sse)` → `[xxxxxx]s [F5]e.`
+Bars 90–91: G5 `w~w` (tied whole notes, end of song)
 
 ---
 

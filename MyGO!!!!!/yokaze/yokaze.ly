@@ -366,6 +366,38 @@ barSeventyThree = {
   \deadNote <e,\6 a,\5 d\4 g\3 b\2 e'\1>16 <f,\6 c\5>8. |
 }
 
+% Bar 83 — F5: (ee)(ee)e rq.
+barEightyThree = {
+  <f,\6 c\5>8 <f,\6 c\5>8
+  <f,\6 c\5>8 <f,\6 c\5>8
+  <f,\6 c\5>8
+  r4. |
+}
+
+% Bar 84 — Solo 2 opening: rh re xxxxxx(ss) q glissando down
+barEightyFour = {
+  r2 r8
+  \deadNote <e,\6 a,\5 d\4 g\3 b\2 e'\1>16 \deadNote <e,\6 a,\5 d\4 g\3 b\2 e'\1>16
+  \deadNote <e,\6 a,\5 d\4 g\3 b\2 e'\1>4\glissando |
+}
+
+% Bar 89 — G5 q (e.s)(sse) → xxxxxx s + F5 e.
+barEightyNine = {
+  <g,\6 d\5>4
+  <g,\6 d\5>8. <g,\6 d\5>16
+  <g,\6 d\5>16 <g,\6 d\5>16 <g,\6 d\5>8
+  \deadNote <e,\6 a,\5 d\4 g\3 b\2 e'\1>16 <f,\6 c\5>8. |
+}
+
+% Bars 90–91 — G5 tied whole notes
+barNinety = {
+  <g,\6 d\5>1~ |
+}
+
+barNinetyOne = {
+  <g,\6 d\5>1 |
+}
+
 % ── Chord name bar variables ─────────────────────────────────────────────────
 
 chGF      = \chordmode { g4:5 g8.:5 g16:5 g16:5 f16:5 f8:5 f8:5 f16:5 f16:5 | }
@@ -396,6 +428,8 @@ chSeventy    = \chordmode { b2:5 cis2:5 | }
 chSeventyOne = \chordmode { a2:5 e2:5 | }
 chSeventyTwo   = \chordmode { b1:5 | }
 chSeventyThree = \chordmode { aes2:5 s4 f4:5 | }
+chEightyNine   = \chordmode { g2.:5 f4:5 | }
+chGpow         = \chordmode { g1:5 | }
 
 chordNames = {
   \key bes \major
@@ -430,6 +464,14 @@ chordNames = {
   \chSixtyFive \chSixtySix \chSixtyFive \chSixtyEight
   \chSixtyFive \chSeventy \chSeventyOne \chSeventyTwo
   \chSeventyThree
+  % Chorus 2 (74–)
+  \key bes \major
+  \chEbBb \chFG \chEbBb \chFFhi
+  \chEbBb \chThirty \chEbBb \chFpow
+  \chEbBbHalf \chFpow
+  % Solo 2 (84–91)
+  \chPh \chGF \chEbBb \chGF
+  \chEbBb \chEightyNine \chGpow \chGpow
 }
 
 music = {
@@ -475,7 +517,17 @@ music = {
   \key cis \minor
   \barSixtyFive \barSixtySix \barSixtySeven \barSixtyEight \break
   \barSixtyNine \barSeventy \barSeventyOne \barSeventyTwo \break
-  \barSeventyThree
+  \barSeventyThree \break
+  % ── Chorus 2 (bars 74–) ──────────────────────────────────────────────────────
+  \mark \markup { \bold "Chorus 2" }
+  \key bes \major
+  \barEbBb \barFG \barEbBb \barFFhi \break
+  \barEbBb \barThirty \barEbBb \barFpow \break
+  \barThirtyThree \barEightyThree \break
+  % ── Solo 2 (bars 84–91) ─────────────────────────────────────────────────────
+  \mark \markup { \bold "Solo 2" }
+  \barEightyFour \barGF \barEbBb \barGF \break
+  \barEbBb \barEightyNine \barNinety \barNinetyOne \break
 }
 
 \score {
